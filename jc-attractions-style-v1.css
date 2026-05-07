@@ -1,0 +1,100 @@
+#stickyMenu {
+  position: sticky;
+  top: 0;
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(8px);
+  z-index: 9999;
+  text-align: center;
+  padding: 10px 0;
+  border-bottom: 1px solid #ccc;
+}
+
+#stickyMenu .Button--primary {
+  display: inline-block;
+  margin: 5px;
+}
+
+.jc-section-header-wrap {
+  display: flex;
+  justify-content: center;
+  grid-column: 1 / -1;
+  width: 100%;
+  margin-top: 60px;
+}
+
+.jc-section-header-wrap:first-child {
+  margin-top: 120px;
+}
+
+.jc-section-header {
+  width: 100%;
+  max-width: 1200px;
+}
+
+.attraction-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  width: min(1200px, calc(100% - 32px));
+  margin: 0 auto 48px;
+}
+
+.attraction-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.14);
+  cursor: pointer;
+  overflow: hidden;
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.attraction-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.18);
+}
+
+.attraction-img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.attraction-content {
+  padding: 14px 16px 16px;
+}
+
+.attraction-content strong {
+  display: block;
+  margin-bottom: 8px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  z-index: 10000;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.58);
+}
+
+.modal-content {
+  position: relative;
+  width: min(720px, calc(100% - 32px));
+  margin: 7vh auto;
+  padding: 24px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 16px;
+  cursor: pointer;
+  font-size: 32px;
+  line-height: 1;
+}
+
+#modal-text {
+  white-space: pre-line;
